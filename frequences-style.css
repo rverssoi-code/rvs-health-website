@@ -1,0 +1,434 @@
+/* ========================================
+   POLICES CUSTOM - RVS
+   ======================================== */
+
+@font-face {
+    font-family: 'Alpha Brights';
+    src: url('fonts/Alpha_Brights.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Viking';
+    src: url('fonts/VIKING-N.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gabriela';
+    src: url('fonts/Gabriela_Smithasa.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ========================================
+   VARIABLES & RESET
+   ======================================== */
+
+:root {
+    /* Palette RVS */
+    --bleu-profond: #1a3a52;
+    --bleu-nuit: #0f2537;
+    --vert-foret: #2d5016;
+    --vert-sauge: #6b8e23;
+    --or-doux: #d4af37;
+    --beige-chaud: #e8dcc4;
+    --blanc-casse: #f8f6f0;
+    --gris-doux: #4a5568;
+    
+    /* Couleurs fréquences */
+    --freq-ultra-low: #2c3e50;
+    --freq-schumann: #27ae60;
+    --freq-harmonic: #3498db;
+    --freq-gamma: #9b59b6;
+    --freq-diapason: #16a085;
+    --freq-om: #e67e22;
+    --freq-solfeggio-1: #e74c3c;
+    --freq-solfeggio-2: #e67e22;
+    --freq-solfeggio-3: #f39c12;
+    --freq-solfeggio-4: #f1c40f;
+    --freq-miracle: #d4af37;
+    --freq-solfeggio-5: #2ecc71;
+    --freq-solfeggio-6: #3498db;
+    --freq-solfeggio-7: #9b59b6;
+    --freq-solfeggio-8: #8e44ad;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: var(--gris-doux);
+    background: linear-gradient(135deg, var(--blanc-casse) 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+/* ========================================
+   CONTAINER
+   ======================================== */
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--vert-foret) 100%);
+    border-radius: 20px;
+    color: white;
+}
+
+.page-header .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 15px rgba(212, 175, 55, 0.3));
+}
+
+.page-header h1 {
+    font-family: 'Viking', serif;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-header .subtitle {
+    font-family: 'Gabriela', cursive;
+    font-size: 1.3rem;
+    color: var(--or-doux);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   LAYOUT DEUX COLONNES
+   ======================================== */
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   COLONNE GAUCHE - BULLES FRÉQUENCES
+   ======================================== */
+
+.frequencies-column {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 20px;
+}
+
+.frequencies-column h2 {
+    font-family: 'Viking', serif;
+    color: var(--bleu-profond);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.freq-bubble {
+    background: linear-gradient(135deg, var(--beige-chaud) 0%, white 100%);
+    border-radius: 50px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--or-doux);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.freq-bubble:hover {
+    transform: translateX(10px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.freq-bubble.active {
+    transform: translateX(15px) scale(1.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-left-width: 8px;
+}
+
+.freq-number {
+    font-family: 'Alpha Brights', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.freq-name {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Couleurs spécifiques par type */
+.freq-ultra-low { border-left-color: var(--freq-ultra-low); }
+.freq-ultra-low .freq-number { color: var(--freq-ultra-low); }
+
+.freq-schumann { border-left-color: var(--freq-schumann); }
+.freq-schumann .freq-number { color: var(--freq-schumann); }
+
+.freq-schumann-harmonic { border-left-color: var(--freq-harmonic); }
+.freq-schumann-harmonic .freq-number { color: var(--freq-harmonic); }
+
+.freq-gamma { border-left-color: var(--freq-gamma); }
+.freq-gamma .freq-number { color: var(--freq-gamma); }
+
+.freq-diapason { border-left-color: var(--freq-diapason); }
+.freq-diapason .freq-number { color: var(--freq-diapason); }
+
+.freq-om { border-left-color: var(--freq-om); }
+.freq-om .freq-number { color: var(--freq-om); }
+
+.freq-solfeggio-1 { border-left-color: var(--freq-solfeggio-1); }
+.freq-solfeggio-1 .freq-number { color: var(--freq-solfeggio-1); }
+
+.freq-solfeggio-2 { border-left-color: var(--freq-solfeggio-2); }
+.freq-solfeggio-2 .freq-number { color: var(--freq-solfeggio-2); }
+
+.freq-solfeggio-3 { border-left-color: var(--freq-solfeggio-3); }
+.freq-solfeggio-3 .freq-number { color: var(--freq-solfeggio-3); }
+
+.freq-solfeggio-4 { border-left-color: var(--freq-solfeggio-4); }
+.freq-solfeggio-4 .freq-number { color: var(--freq-solfeggio-4); }
+
+.freq-harmonique { border-left-color: #1abc9c; }
+.freq-harmonique .freq-number { color: #1abc9c; }
+
+.freq-standard { border-left-color: #34495e; }
+.freq-standard .freq-number { color: #34495e; }
+
+.freq-miracle { border-left-color: var(--freq-miracle); }
+.freq-miracle .freq-number { color: var(--freq-miracle); }
+
+.freq-solfeggio-5 { border-left-color: var(--freq-solfeggio-5); }
+.freq-solfeggio-5 .freq-number { color: var(--freq-solfeggio-5); }
+
+.freq-solfeggio-6 { border-left-color: var(--freq-solfeggio-6); }
+.freq-solfeggio-6 .freq-number { color: var(--freq-solfeggio-6); }
+
+.freq-solfeggio-7 { border-left-color: var(--freq-solfeggio-7); }
+.freq-solfeggio-7 .freq-number { color: var(--freq-solfeggio-7); }
+
+.freq-solfeggio-8 { border-left-color: var(--freq-solfeggio-8); }
+.freq-solfeggio-8 .freq-number { color: var(--freq-solfeggio-8); }
+
+/* ========================================
+   COLONNE DROITE - DESCRIPTIONS
+   ======================================== */
+
+.descriptions-column {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.descriptions-column h2 {
+    font-family: 'Viking', serif;
+    color: var(--bleu-profond);
+    margin-bottom: 40px;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--or-doux);
+    padding-bottom: 15px;
+}
+
+.freq-description {
+    display: none;
+    padding: 30px;
+    background: var(--blanc-casse);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--or-doux);
+    animation: fadeIn 0.5s ease;
+}
+
+.freq-description.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.freq-description h3 {
+    font-family: 'Gabriela', sans-serif;
+    color: var(--bleu-profond);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--or-doux);
+}
+
+.desc-section {
+    margin-bottom: 25px;
+}
+
+.desc-section h4 {
+    font-family: 'Gabriela', cursive;
+    color: var(--vert-foret);
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.desc-section p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.desc-section strong {
+    color: var(--bleu-profond);
+    font-weight: 600;
+}
+
+.desc-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.desc-section li {
+    padding: 10px 15px;
+    background: white;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.desc-section li:before {
+    content: "→";
+    position: absolute;
+    left: 12px;
+    color: var(--or-doux);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.page-footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--bleu-nuit);
+    color: white;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+.page-footer p {
+    margin-bottom: 10px;
+}
+
+.page-footer strong {
+    font-family: 'Alpha Brights', sans-serif;
+    color: var(--or-doux);
+}
+
+.page-footer .note {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* ========================================
+   SCROLLBAR CUSTOM
+   ======================================== */
+
+.frequencies-column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.frequencies-column::-webkit-scrollbar-track {
+    background: var(--blanc-casse);
+    border-radius: 10px;
+}
+
+.frequencies-column::-webkit-scrollbar-thumb {
+    background: var(--or-doux);
+    border-radius: 10px;
+}
+
+.frequencies-column::-webkit-scrollbar-thumb:hover {
+    background: var(--vert-foret);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .frequencies-column {
+        position: relative;
+        max-height: none;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header .subtitle {
+        font-size: 1rem;
+    }
+    
+    .content-wrapper {
+        gap: 20px;
+    }
+    
+    .frequencies-column,
+    .descriptions-column {
+        padding: 20px;
+    }
+    
+    .freq-bubble {
+        padding: 15px 20px;
+    }
+    
+    .freq-number {
+        font-size: 1.2rem;
+    }
+    
+    .freq-description h3 {
+        font-size: 1.4rem;
+    }
+}

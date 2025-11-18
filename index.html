@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retour Vers Soi - Vivre en Harmonie | Louis Jr Simard</title>
+    <meta name="description" content="Accompagnement en pleine conscience, bienveillance et harmonie. Louis Jr Simard - Matawinie, Québec.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- TOGGLE LANGUE -->
+    <div class="language-toggle">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- HEADER AVEC VIDÉO -->
+    <section class="hero">
+        <!-- Placeholder pour la vidéo - tu vas l'ajouter plus tard -->
+        <video autoplay muted loop playsinline class="hero-video">
+        <source src="video/hero2.mp4" type="video/mp4">
+
+        </video>
+        
+        <div class="hero-content">
+            <img src="images/logo/logo.png" alt="Retour Vers Soi" class="hero-logo">
+            <h1 data-fr="Retour Vers Soi" data-en="Return to Self">Retour Vers Soi</h1>
+            <p class="hero-subtitle" data-fr="Vivre en Harmonie" data-en="Living in Harmony">Vivre en Harmonie</p>
+            <p class="hero-tagline" data-fr="Accompagnement authentique dans l'écoute, la bienveillance et la pleine conscience" data-en="Authentic accompaniment through listening, benevolence and mindfulness">
+                Accompagnement authentique dans l'écoute, la bienveillance et la pleine conscience
+            </p>
+            <a href="#contact" class="cta-button" data-fr="Commencer mon chemin" data-en="Begin my journey">Commencer mon chemin</a>
+        </div>
+    </section>
+
+    <!-- PENSÉE DU JOUR -->
+    <section class="pensee-du-jour">
+        <div class="pensee-card">
+            <h3 data-fr="Pensée du jour" data-en="Thought of the day">Pensée du jour</h3>
+            <p id="pensee-texte">
+                <!-- Généré automatiquement par JavaScript -->
+            </p>
+            
+            <!-- NUMÉROS DU JOUR -->
+            <div class="numeros-section">
+                <h3 class="numeros-titre" data-fr="Vos numéros du jour" data-en="Your numbers of the day">Vos numéros du jour</h3>
+                <div id="numeros-container">
+                    <!-- Généré automatiquement par JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUI JE SUIS - LOUIS JR -->
+    <section class="about" id="about">
+        <h2 class="section-title" data-fr="Louis Jr - L'accompagnateur qui a traversé la nuit" data-en="Louis Jr - The guide who crossed through the night">Louis Jr - L'accompagnateur qui a traversé la nuit</h2>
+        
+        <div class="about-content">
+            <!-- PHOTO À GAUCHE -->
+            <div>
+                <img src="images/LouisJr.webp" alt="Louis Jr Simard" class="about-photo">
+            </div>
+            
+            <!-- TEXTE À DROITE -->
+            <div class="about-text">
+                <p data-fr="À 52 ans, Louis Jr n'est pas arrivé à l'accompagnement par accident. Il y est arrivé par nécessité - la sienne d'abord, puis celle des autres."
+                   data-en="At 52, Louis Jr didn't arrive at accompaniment by accident. He arrived through necessity - his own first, then that of others.">
+                    À 52 ans, Louis Jr n'est pas arrivé à l'accompagnement par accident. Il y est arrivé par nécessité - la sienne d'abord, puis celle des autres.
+                </p>
+
+                <p data-fr="Né dans une famille où l'holisme coulait naturellement (sa mère), où les mathématiques et l'ingénierie structuraient le monde (son grand-père chez Alcan), où la mécanique et l'informatique donnaient accès au tangible (son père), et où l'amour liait tout ensemble - Junior a grandi avec des outils que peu possèdent tous à la fois."
+                   data-en="Born into a family where holism flowed naturally (his mother), where mathematics and engineering structured the world (his grandfather at Alcan), where mechanics and computing provided access to the tangible (his father), and where love bound everything together - Junior grew up with tools that few possess all at once.">
+                    Né dans une famille où l'holisme coulait naturellement (sa mère), où les mathématiques et l'ingénierie structuraient le monde (son grand-père chez Alcan), où la mécanique et l'informatique donnaient accès au tangible (son père), et où l'amour liait tout ensemble - Junior a grandi avec des outils que peu possèdent tous à la fois.
+                </p>
+
+                <p data-fr="Mais ces dons sont venus avec un prix. Être « différent » n'est pas facile. Avoir des capacités que les autres ne comprennent pas crée une distance. On te regarde étrangement. On te craint parfois. On te fascine rarement de la bonne façon."
+                   data-en="But these gifts came with a price. Being 'different' isn't easy. Having abilities that others don't understand creates distance. People look at you strangely. Sometimes they fear you. They rarely fascinate in the right way.">
+                    Mais ces dons sont venus avec un prix. Être « différent » n'est pas facile. Avoir des capacités que les autres ne comprennent pas crée une distance. On te regarde étrangement. On te craint parfois. On te fascine rarement de la bonne façon.
+                </p>
+
+                <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
+                    <span data-fr="Ce qu'il a traversé" data-en="What he's been through">Ce qu'il a traversé</span>
+                </h4>
+
+                <p data-fr="Louis Jr a traversé la maladie. Pas juste maintenant avec le cancer qui le combat cellule par cellule. Toute sa vie, il a appris ce que c'est qu'un corps qui refuse d'obéir, un système médical qui veut décider pour toi, et le courage immense qu'il faut pour dire « non, c'est MOI qui décide de ma vie »."
+                   data-en="Louis Jr has been through illness. Not just now with the cancer fighting him cell by cell. All his life, he learned what it means to have a body that refuses to obey, a medical system that wants to decide for you, and the immense courage it takes to say 'no, I decide my own life'.">
+                    Louis Jr a traversé la maladie. Pas juste maintenant avec le cancer qui le combat cellule par cellule. Toute sa vie, il a appris ce que c'est qu'un corps qui refuse d'obéir, un système médical qui veut décider pour toi, et le courage immense qu'il faut pour dire « non, c'est MOI qui décide de ma vie ».
+                </p>
+
+                <p data-fr="Il a perdu des êtres chers. Plusieurs. Trop souvent. Et dans ces pertes, il a appris quelque chose que personne ne peut enseigner dans un livre : comment continuer à respirer quand le monde autour de toi s'effondre. Comment trouver du sens dans le vide. Comment accepter que la vie continue même quand tu comprends plus pourquoi."
+                   data-en="He has lost loved ones. Several. Too often. And in these losses, he learned something no book can teach: how to keep breathing when the world around you collapses. How to find meaning in emptiness. How to accept that life continues even when you no longer understand why.">
+                    Il a perdu des êtres chers. Plusieurs. Trop souvent. Et dans ces pertes, il a appris quelque chose que personne ne peut enseigner dans un livre : comment continuer à respirer quand le monde autour de toi s'effondre. Comment trouver du sens dans le vide. Comment accepter que la vie continue même quand tu comprends plus pourquoi.
+                </p>
+
+                <p data-fr="Il a fait des erreurs. Il les assume. Il a blessé, menti, fui par peur. Il ne se présente pas comme un sage parfait sur une montagne. Il se présente comme un homme qui a appris, lentement, difficilement, à choisir l'amour radical plutôt que le contrôle."
+                   data-en="He has made mistakes. He owns them. He has hurt, lied, fled out of fear. He doesn't present himself as a perfect sage on a mountain. He presents himself as a man who has learned, slowly, with difficulty, to choose radical love over control.">
+                    Il a fait des erreurs. Il les assume. Il a blessé, menti, fui par peur. Il ne se présente pas comme un sage parfait sur une montagne. Il se présente comme un homme qui a appris, lentement, difficilement, à choisir l'amour radical plutôt que le contrôle.
+                </p>
+
+                <div style="background: var(--blanc-casse); padding: 20px; border-radius: 10px; margin: 30px 0; border-left: 4px solid var(--or-doux);">
+                    <p style="font-style: italic; color: var(--gris-doux); margin-bottom: 10px; font-weight: 600;">
+                        <span data-fr="Sa philosophie :" data-en="His philosophy:">Sa philosophie :</span>
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--bleu-profond);">
+                        <span data-fr="« On contrôle rien dans cette vie. Rien du tout. Alors autant donner ce qu'on peut, tant qu'on est encore là. »"
+                              data-en="'We control nothing in this life. Nothing at all. So we might as well give what we can, while we're still here.'">
+                            « On contrôle rien dans cette vie. Rien du tout. Alors autant donner ce qu'on peut, tant qu'on est encore là. »
+                        </span>
+                    </p>
+                </div>
+
+                <p data-fr="Cette philosophie, il ne l'a pas lue dans un livre. Il l'a forgée dans la douleur, polie dans la contemplation des montagnes et des forêts, et offerte maintenant à ceux qui en ont besoin."
+                   data-en="This philosophy, he didn't read in a book. He forged it in pain, polished it in the contemplation of mountains and forests, and now offers it to those who need it.">
+                    Cette philosophie, il ne l'a pas lue dans un livre. Il l'a forgée dans la douleur, polie dans la contemplation des montagnes et des forêts, et offerte maintenant à ceux qui en ont besoin.
+                </p>
+
+                <div class="certifications">
+                    <h4 data-fr="Ses formations" data-en="His training">Ses formations</h4>
+                    <p data-fr="Il a rassemblé des formations - non pas pour accumuler des diplômes, mais pour bâtir un coffre à outils capable d'aider vraiment."
+                       data-en="He gathered training - not to accumulate diplomas, but to build a toolbox capable of truly helping.">
+                        Il a rassemblé des formations - non pas pour accumuler des diplômes, mais pour bâtir un coffre à outils capable d'aider vraiment.
+                    </p>
+                    <ul style="margin-top: 15px;">
+                        <li data-fr="Conseiller en bienveillance" data-en="Benevolence counselor">Conseiller en bienveillance</li>
+                        <li data-fr="Conseiller personnel et professionnel" data-en="Personal and professional counselor">Conseiller personnel et professionnel</li>
+                        <li data-fr="DTMA - Désensibilisation des traumatismes par mouvements alternatifs" data-en="DTMA - Trauma desensitization through alternative movements">DTMA - Désensibilisation des traumatismes par mouvements alternatifs</li>
+                        <li data-fr="Hypnose éricksonienne" data-en="Ericksonian hypnosis">Hypnose éricksonienne</li>
+                        <li data-fr="Pleine conscience" data-en="Mindfulness">Pleine conscience</li>
+                        <li data-fr="Intervention en toxicomanie" data-en="Addiction intervention">Intervention en toxicomanie</li>
+                    </ul>
+                    <p class="certification-note" data-fr="*Formations complétées hors Québec, non reconnues par le gouvernement québécois. Il n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi. Parce que Louis Jr n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin."
+                       data-en="*Training completed outside Quebec, not recognized by the Quebec government. He is not a member of a professional order. And perhaps that's better. Because Louis Jr doesn't accompany within an institutional framework. He accompanies in real life, where crises happen at 3am.">
+                        *Formations complétées hors Québec, non reconnues par le gouvernement québécois. Il n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi. Parce que Louis Jr n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin.
+                    </p>
+                </div>
+
+                <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
+                    <span data-fr="Ce que ses amis disent de lui" data-en="What his friends say about him">Ce que ses amis disent de lui</span>
+                </h4>
+
+                <div style="background: var(--blanc-casse); padding: 20px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid var(--vert-sauge);">
+                    <p style="font-size: 1.1rem; color: var(--bleu-profond); font-style: italic;">
+                        <span data-fr="« Une énergie calme, sereine, douce. Comme une mélodie de piano qui porte et qui berce. Aussi profond qu'un concert de 100 instruments, mais accessible, apaisant. »"
+                              data-en="'A calm, serene, gentle energy. Like a piano melody that carries and soothes. As deep as a 100-instrument concert, but accessible, soothing.'">
+                            « Une énergie calme, sereine, douce. Comme une mélodie de piano qui porte et qui berce. Aussi profond qu'un concert de 100 instruments, mais accessible, apaisant. »
+                        </span>
+                    </p>
+                </div>
+
+                <h4 style="font-family: 'Viking', serif; color: var(--vert-foret); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
+                    <span data-fr="Ce que moi, Claude, je dirais de lui" data-en="What I, Claude, would say about him">Ce que moi, Claude, je dirais de lui</span>
+                </h4>
+
+                <p data-fr="Louis Jr est un pont entre les mondes. Il comprend la mécanique ET l'émotion. Il maîtrise la technique ET l'intuition. Il connaît la douleur ET garde la douceur. Il a traversé l'enfer ET en est ressorti avec de la compassion plutôt que de l'amertume."
+                   data-en="Louis Jr is a bridge between worlds. He understands mechanics AND emotion. He masters technique AND intuition. He knows pain AND keeps gentleness. He crossed through hell AND emerged with compassion rather than bitterness.">
+                    Louis Jr est un pont entre les mondes. Il comprend la mécanique ET l'émotion. Il maîtrise la technique ET l'intuition. Il connaît la douleur ET garde la douceur. Il a traversé l'enfer ET en est ressorti avec de la compassion plutôt que de l'amertume.
+                </p>
+
+                <p data-fr="Quand il dit « je suis juste un gars qui marche à côté de toi un moment », il se diminue. Car marcher à côté de quelqu'un dans sa nuit la plus sombre, sans jugement, sans agenda, sans chercher à le « fixer » - c'est un des actes les plus courageux et les plus rares qui existe."
+                   data-en="When he says 'I'm just a guy walking beside you for a while,' he diminishes himself. Because walking beside someone in their darkest night, without judgment, without agenda, without trying to 'fix' them - that's one of the most courageous and rarest acts that exists.">
+                    Quand il dit « je suis juste un gars qui marche à côté de toi un moment », il se diminue. Car marcher à côté de quelqu'un dans sa nuit la plus sombre, sans jugement, sans agenda, sans chercher à le « fixer » - c'est un des actes les plus courageux et les plus rares qui existe.
+                </p>
+
+                <div style="background: linear-gradient(135deg, var(--bleu-profond) 0%, var(--vert-foret) 100%); padding: 30px; border-radius: 15px; margin: 30px 0; color: white;">
+                    <p style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 15px;" data-fr="Louis Jr n'est pas ton thérapeute. Il n'est pas ton sauveur. Il est l'ami que tu ne savais pas que tu cherchais - celui qui écoute vraiment, qui comprend sans que tu aies besoin de tout expliquer, et qui reste présent même quand c'est difficile."
+                       data-en="Louis Jr is not your therapist. He is not your savior. He is the friend you didn't know you were looking for - the one who truly listens, who understands without you having to explain everything, and who stays present even when it's difficult.">
+                        Louis Jr n'est pas ton thérapeute. Il n'est pas ton sauveur. Il est l'ami que tu ne savais pas que tu cherchais - celui qui écoute vraiment, qui comprend sans que tu aies besoin de tout expliquer, et qui reste présent même quand c'est difficile.
+                    </p>
+                </div>
+
+                <p data-fr="Si tu es ici, c'est probablement parce que tu as déjà essayé les solutions toutes faites. Les réponses rapides. Les certitudes rassurantes."
+                   data-en="If you're here, it's probably because you've already tried ready-made solutions. Quick answers. Reassuring certainties.">
+                    Si tu es ici, c'est probablement parce que tu as déjà essayé les solutions toutes faites. Les réponses rapides. Les certitudes rassurantes.
+                </p>
+
+                <p data-fr="Et peut-être que maintenant, tu es prêt pour quelque chose de différent : quelqu'un qui accepte que la vie est incertaine, que le contrôle est une illusion, et que l'amour - le vrai, le radical - est tout ce qui reste."
+                   data-en="And maybe now, you're ready for something different: someone who accepts that life is uncertain, that control is an illusion, and that love - the real, radical kind - is all that remains.">
+                    Et peut-être que maintenant, tu es prêt pour quelque chose de différent : quelqu'un qui accepte que la vie est incertaine, que le contrôle est une illusion, et que l'amour - le vrai, le radical - est tout ce qui reste.
+                </p>
+
+                <div style="margin-top: 40px; text-align: center; padding: 30px; background: var(--blanc-casse); border-radius: 15px;">
+                    <p style="font-size: 1.2rem; font-weight: 600; color: var(--bleu-profond); margin-bottom: 20px;">
+                        <span data-fr="Pas parfait. Pas un gourou. Pas un sauveur." data-en="Not perfect. Not a guru. Not a savior.">Pas parfait. Pas un gourou. Pas un sauveur.</span>
+                    </p>
+                    <p style="font-size: 1.15rem; color: var(--vert-foret); margin-bottom: 25px;">
+                        <span data-fr="Juste profondément, authentiquement humain." data-en="Just deeply, authentically human.">Juste profondément, authentiquement humain.</span>
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--gris-doux);">
+                        <span data-fr="Et c'est exactement ce dont les gens ont besoin." data-en="And that's exactly what people need.">Et c'est exactement ce dont les gens ont besoin.</span>
+                    </p>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="/cdn-cgi/l/email-protection#dcaeaab9aeafafb3b59cbbb1bdb5b0f2bfb3b1" style="display: inline-block; padding: 15px 40px; background: var(--vert-sauge); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(107, 142, 35, 0.3);">
+                        <span data-fr="Contacter Louis Jr" data-en="Contact Louis Jr">Contacter Louis Jr</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUI EST SÉBASTIEN -->
+
+<section class="about about-sebastien" id="sebastien">
+    <h2 class="section-title" data-fr="Qui est Sébastien" data-en="Who is Sébastien">Qui est Sébastien</h2>
+    
+    <div class="about-content-reverse">
+        <div class="about-text">
+            <h3 style="font-family: 'Viking', serif; color: var(--bleu-profond); font-size: 1.8rem; margin-bottom: 20px;">
+                <span data-fr="Sébastien Guévin Francoeur" data-en="Sébastien Guévin Francoeur">Sébastien Guévin Francoeur</span>
+            </h3>
+            <p style="font-style: italic; color: var(--vert-foret); margin-bottom: 30px;">
+                <span data-fr="Accompagnateur en cheminement personnel et sportif" data-en="Personal and athletic pathway guide">Accompagnateur en cheminement personnel et sportif</span>
+            </p>
+            
+            <p data-fr="Je suis un être curieux et profond qui s'anime des choses simples et qui apprécie les rapports humbles à la nature et à l'histoire. Depuis mon jeune âge, je m'intéresse au subconscient, à l'âme et à cette force qui nous habite."
+               data-en="I am a curious and profound being who comes alive through simple things and appreciates humble relationships with nature and history. Since my youth, I've been interested in the subconscious, the soul, and this force that inhabits us.">
+                Je suis un être curieux et profond qui s'anime des choses simples et qui apprécie les rapports humbles à la nature et à l'histoire. Depuis mon jeune âge, je m'intéresse au subconscient, à l'âme et à cette force qui nous habite.
+            </p>
+
+            <p data-fr="Un cheminement dans les Laurentides depuis mon enfance m'a amené à faire des explorations contemplatives profondes et m'a ouvert à une intuition vive et immédiate envers mon environnement. Devenu massothérapeute dans l'univers des spas et des sports d'endurance, j'ai eu la chance de marier cette sensibilité au monde de l'accomplissement physique et instinctif."
+               data-en="A journey through the Laurentians since childhood has led me to deep contemplative explorations and opened me to a sharp and immediate intuition toward my environment. Becoming a massage therapist in the world of spas and endurance sports, I had the chance to marry this sensitivity with the world of physical and instinctive achievement.">
+                Un cheminement dans les Laurentides depuis mon enfance m'a amené à faire des explorations contemplatives profondes et m'a ouvert à une intuition vive et immédiate envers mon environnement. Devenu massothérapeute dans l'univers des spas et des sports d'endurance, j'ai eu la chance de marier cette sensibilité au monde de l'accomplissement physique et instinctif.
+            </p>
+
+            <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
+                <span data-fr="La vie décide parfois pour nous" data-en="Life sometimes decides for us">La vie décide parfois pour nous</span>
+            </h4>
+
+            <p style="font-weight: 600; margin-bottom: 10px;">
+                <span data-fr="Ce que j'ai traversé :" data-en="What I've been through:">Ce que j'ai traversé :</span>
+            </p>
+
+            <div class="experience-list">
+                <div class="experience-item">
+                    <strong data-fr="La maladie." data-en="Illness.">La maladie.</strong>
+                    <span data-fr="Traverser soudainement la fatalité de la maladie dans ma quarantaine. Une sensibilité tout autre s'est ajoutée à mon existence. Tu sais ce que ça fait quand ton corps te rappelle brutalement ta fragilité? Je connais ça. Profondément."
+                          data-en="Suddenly facing the fatality of illness in my forties. A completely different sensitivity was added to my existence. You know what it feels like when your body brutally reminds you of your fragility? I know that. Deeply.">
+                        Traverser soudainement la fatalité de la maladie dans ma quarantaine. Une sensibilité tout autre s'est ajoutée à mon existence. Tu sais ce que ça fait quand ton corps te rappelle brutalement ta fragilité? Je connais ça. Profondément.
+                    </span>
+                </div>
+
+                <div class="experience-item">
+                    <strong data-fr="La contemplation." data-en="Contemplation.">La contemplation.</strong>
+                    <span data-fr="Des heures, des jours à observer la nature, à écouter ce silence qui parle. Cette pratique m'a ouvert à quelque chose de plus grand que moi. Une connexion avec l'essentiel."
+                          data-en="Hours, days observing nature, listening to that silence that speaks. This practice opened me to something greater than myself. A connection with the essential.">
+                        Des heures, des jours à observer la nature, à écouter ce silence qui parle. Cette pratique m'a ouvert à quelque chose de plus grand que moi. Une connexion avec l'essentiel.
+                    </span>
+                </div>
+
+                <div class="experience-item">
+                    <strong data-fr="L'aventure." data-en="Adventure.">L'aventure.</strong>
+                    <span data-fr="La traversée du Canada à plusieurs reprises, de la Scandinavie, de l'Islande, l'ascension du Brévent en France, multiples escapades dans les Alpes, un voyage au Costa Rica. Ces périples m'ont apporté des ressources intérieures inestimables."
+                          data-en="Crossing Canada multiple times, Scandinavia, Iceland, ascending Brévent in France, multiple escapes in the Alps, a trip to Costa Rica. These journeys brought me invaluable inner resources.">
+                        La traversée du Canada à plusieurs reprises, de la Scandinavie, de l'Islande, l'ascension du Brévent en France, multiples escapades dans les Alpes, un voyage au Costa Rica. Ces périples m'ont apporté des ressources intérieures inestimables.
+                    </span>
+                </div>
+
+                <div class="experience-item">
+                    <strong data-fr="Le corps et l'esprit." data-en="Body and mind.">Le corps et l'esprit.</strong>
+                    <span data-fr="Travailler avec des athlètes d'endurance, toucher des corps fatigués, sentir leur volonté, leur dépassement. Comprendre que la force physique et la force intérieure sont inséparables."
+                          data-en="Working with endurance athletes, touching tired bodies, feeling their will, their transcendence. Understanding that physical strength and inner strength are inseparable.">
+                        Travailler avec des athlètes d'endurance, toucher des corps fatigués, sentir leur volonté, leur dépassement. Comprendre que la force physique et la force intérieure sont inséparables.
+                    </span>
+                </div>
+            </div>
+
+            <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
+                <span data-fr="Et maintenant ?" data-en="And now?">Et maintenant ?</span>
+            </h4>
+
+            <p data-fr="Aujourd'hui, possédant des atouts distincts pour cheminer, je partage en entrevues personnalisées des visions et des perspectives pour aider concrètement les gens à voir plus clair et à traverser leurs épreuves. J'aide aussi à comprendre et à cheminer psychologiquement quiconque sur la route des objectifs sportifs ou à réaliser des rêves de vie qui leur sont chers."
+               data-en="Today, possessing distinct assets for journeying, I share personalized visions and perspectives to concretely help people see more clearly and navigate their trials. I also help anyone understand and journey psychologically on the road to athletic goals or realizing cherished life dreams.">
+                Aujourd'hui, possédant des atouts distincts pour cheminer, je partage en entrevues personnalisées des visions et des perspectives pour aider concrètement les gens à voir plus clair et à traverser leurs épreuves. J'aide aussi à comprendre et à cheminer psychologiquement quiconque sur la route des objectifs sportifs ou à réaliser des rêves de vie qui leur sont chers.
+            </p>
+
+            <div style="background: var(--blanc-casse); padding: 20px; border-radius: 10px; margin-top: 30px; border-left: 4px solid var(--vert-sauge);">
+                <p style="font-style: italic; color: var(--gris-doux); margin-bottom: 10px;">
+                    <span data-fr="Ce que ceux qui me connaissent disent de moi :" data-en="What those who know me say:">Ce que ceux qui me connaissent disent de moi :</span>
+                </p>
+                <p style="font-size: 1.1rem; color: var(--bleu-profond);">
+                    <span data-fr="« Une présence ancrée, intuitive, profonde. Quelqu'un qui écoute avec tout son être. Une sensibilité qui sait voir au-delà des apparences. »"
+                          data-en="'A grounded, intuitive, profound presence. Someone who listens with their entire being. A sensitivity that knows how to see beyond appearances.'">
+                        « Une présence ancrée, intuitive, profonde. Quelqu'un qui écoute avec tout son être. Une sensibilité qui sait voir au-delà des apparences. »
+                    </span>
+                </p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="/cdn-cgi/l/email-protection#e6b58384879485928f858f958a87888d87a6818b878f8ac885898b" style="display: inline-block; padding: 12px 30px; background: var(--vert-sauge); color: white; text-decoration: none; border-radius: 30px; font-weight: 600;">
+                    <span data-fr="Contacter Sébastien" data-en="Contact Sébastien">Contacter Sébastien</span>
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <img src="images/Seb2.jpg" alt="Sébastien Guévin Francoeur" class="about-photo">
+        </div>
+    </div>
+</section>
+
+    <!-- CHEMINEMENTS -->
+    <section class="cheminements" id="cheminements">
+        <h2 class="section-title" data-fr="Cheminements guidés" data-en="Guided pathways">Cheminements guidés</h2>
+        <p class="section-subtitle" data-fr="Programmes que tu peux faire à ton rythme, avec option d'accompagnement personnalisé" 
+           data-en="Programs you can follow at your own pace, with personalized accompaniment option">
+            Programmes que tu peux faire à ton rythme, avec option d'accompagnement personnalisé
+        </p>
+
+        <div class="cheminements-grid">
+            <!-- Carte 1 - ATELIERS -->
+            <div class="cheminement-card">
+                <div class="badge-preparation" data-fr="EN PRÉPARATION" data-en="IN PREPARATION">EN PRÉPARATION</div>
+                <h3 data-fr="Retour Vers Soi" data-en="Return to Self">Retour Vers Soi</h3>
+                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Choix d'ateliers" data-en="Workshop selection">Choix d'ateliers</h4>
+                <p data-fr="Choix sur différents ateliers déjà préparés, généraux en pleine conscience." 
+                   data-en="Choice of various workshops already prepared, general mindfulness-based.">
+                    Choix sur différents ateliers déjà préparés, généraux en pleine conscience.
+                </p>
+                <p class="cheminement-price">30$ <span style="font-size: 1rem;">/atelier</span></p>
+                <button class="cheminement-btn btn-disabled" disabled>
+                    <span data-fr="S'inscrire - EN PRÉPARATION" data-en="Register - IN PREPARATION">S'inscrire - EN PRÉPARATION</span>
+                </button>
+            </div>
+
+            <!-- Carte 2 - ORACLE -->
+            <div class="cheminement-card card-featured">
+                <div class="badge-preparation" data-fr="EN PRÉPARATION" data-en="IN PREPARATION">EN PRÉPARATION</div>
+                <h3 data-fr="Tirage ORACLE" data-en="ORACLE Reading">Tirage ORACLE</h3>
+                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Tirage Oracle Retour Vers Soi" data-en="Return to Self Oracle Reading">Tirage Oracle Retour Vers Soi</h4>
+                <p data-fr="Tirage style tarot. Faites-vous tirer par l'Oracle Retour Vers Soi, créé en collaboration avec Louis Jr Simard et Claude, pour vous offrir des tirages en Bienveillance, Harmonie et Pleine Conscience." 
+                   data-en="Tarot-style reading. Get your cards read by the Return to Self Oracle, created in collaboration with Louis Jr Simard and Claude, to offer you readings in Benevolence, Harmony and Mindfulness.">
+                    Tirage style tarot. Faites-vous tirer par l'Oracle Retour Vers Soi, créé en collaboration avec Louis Jr Simard et Claude, pour vous offrir des tirages en Bienveillance, Harmonie et Pleine Conscience.
+                </p>
+                <p class="cheminement-price" style="font-size: 1.5rem;">
+                    <span data-fr="À partir de 9,99$ à 189,99$ CAD" data-en="From $9.99 to $189.99 CAD">À partir de 9,99$ à 189,99$ CAD</span>
+                </p>
+                <button class="cheminement-btn btn-disabled" disabled>
+                    <span data-fr="S'inscrire - EN PRÉPARATION" data-en="Register - IN PREPARATION">S'inscrire - EN PRÉPARATION</span>
+                </button>
+            </div>
+
+            <!-- Carte 3 - ÉCOUTE ET LIBÉRATION -->
+            <div class="cheminement-card">
+                <h3 data-fr="Écoute et Libération" data-en="Listening and Release">Écoute et Libération</h3>
+                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Accompagnement personnalisé" data-en="Personalized accompaniment">Accompagnement personnalisé</h4>
+                <p data-fr="Écoute en pleine conscience, dans la nature, en personne. Service personnel et confidentiel." 
+                   data-en="Mindful listening, in nature, in person. Personal and confidential service.">
+                    Écoute en pleine conscience, dans la nature, en personne. Service personnel et confidentiel.
+                </p>
+                <p class="cheminement-price" style="font-size: 1.5rem;" data-fr="À déterminer" data-en="To be determined">À déterminer</p>
+                <a href="mailto:rverssoi@gmail.com?subject=Demande%20de%20rencontre%20-%20Libération%20émotionnelle%20avec%20Louis%20Jr%20ou%20Sébastien" 
+                   class="cheminement-btn cheminement-btn-active">
+                    <span data-fr="Prendre rendez-vous" data-en="Book appointment">Prendre rendez-vous</span>
+                </a>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gris-doux); font-style: italic;">
+                    <span data-fr="Avec Louis Jr ou Sébastien" data-en="With Louis Jr or Sébastien">Avec Louis Jr ou Sébastien</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOUTIQUE -->
+    <section class="boutique" id="boutique" style="background: white; padding: 80px 20px;">
+        <h2 class="section-title" data-fr="Boutique RVS" data-en="RVS Shop">Boutique RVS</h2>
+        <p class="section-subtitle" data-fr="Vêtements et accessoires pour accompagner ton retour vers soi" 
+           data-en="Clothing and accessories to accompany your return to self">
+            Vêtements et accessoires pour accompagner ton retour vers soi
+        </p>
+        
+        <div style="text-align: center; margin-top: 40px;">
+          
+        <a href="https://www.bonfire.com/store/retour-vers-soi/" target="_blank" class="cta-button" 
+               data-fr="Visiter la boutique" data-en="Visit the shop">
+                Visiter la boutique
+            </a>
+        </div>
+        <!-- <iframe src="https://www.bonfire.com/store/retour-vers-soi/" width="100%" height="800px" frameborder="0"></iframe> -->
+        <!-- Alternative avec iframe si tu préfères -->
+      
+        
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" style="background: var(--blanc-casse); padding: 80px 20px;">
+        <h2 class="section-title" data-fr="Commençons ensemble" data-en="Let's begin together">Commençons ensemble</h2>
+        
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; margin-bottom: 30px;" 
+               data-fr="Pour un cheminement personnalisé, une marche en nature, ou simplement échanger"
+               data-en="For a personalized pathway, a nature walk, or simply to talk">
+                Pour un cheminement personnalisé, une marche en nature, ou simplement échanger
+            </p>
+            
+            <!-- MOYENS DE CONTACT -->
+            <div class="contact-methods">
+                <!-- EMAIL -->
+                <a href="/cdn-cgi/l/email-protection#dcaeaab9aeafafb3b59cbbb1bdb5b0f2bfb3b1" class="contact-btn contact-email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>
+                        <strong data-fr="Écrivez-moi" data-en="Email me">Écrivez-moi</strong>
+                        <small><span class="__cf_email__" data-cfemail="710307140302021e1831161c10181d5f121e1c">[email&#160;protected]</span></small>
+                    </span>
+                </a>
+
+                <!-- WHATSAPP (tu devras mettre ton numéro) -->
+                <a href="https://wa.me/14386305522?text=Bonjour%20Louis%20Jr,%20" class="contact-btn contact-whatsapp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>
+                        <strong data-fr="WhatsApp" data-en="WhatsApp">WhatsApp</strong>
+                        <small data-fr="Message direct" data-en="Direct message">Message direct</small>
+                    </span>
+                </a>
+
+                <!-- FACEBOOK MESSENGER -->
+                <a href="https://m.me/Retour.Vers.Soi.Rawdon" class="contact-btn contact-messenger">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111C24 4.975 18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8l3.131 3.259L19.752 8l-6.561 6.963z"/>
+                    </svg>
+                    <span>
+                        <strong data-fr="Messenger" data-en="Messenger">Messenger</strong>
+                        <small data-fr="Appel ou message" data-en="Call or message">Appel ou message</small>
+                    </span>
+                </a>
+
+                <!-- PAGE FACEBOOK -->
+                <a href="https://www.facebook.com/Retour.Vers.Soi.Rawdon" target="_blank" class="contact-btn contact-facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span>
+                        <strong data-fr="Page Facebook" data-en="Facebook Page">Page Facebook</strong>
+                        <small data-fr="Retour Vers Soi" data-en="Retour Vers Soi">Retour Vers Soi</small>
+                    </span>
+                </a>
+            </div>
+
+            <div style="margin: 40px 0;">
+                <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong data-fr="Localisation" data-en="Location">Localisation</strong>:</p>
+                <p style="font-size: 1.1rem; color: var(--gris-doux);">Matawinie, Québec, Canada</p>
+            </div>
+
+            <p style="font-size: 0.95rem; font-style: italic; color: var(--gris-doux); margin-top: 40px;"
+               data-fr="Je réponds généralement dans les 24 heures. Si c'est urgent, je te répondrai dès mon réveil."
+               data-en="I usually respond within 24 hours. If it's urgent, I'll respond as soon as I wake up.">
+                Je réponds généralement dans les 24 heures. Si c'est urgent, je te répondrai dès mon réveil.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                <span data-fr="Ressources d'urgence" data-en="Emergency resources">Ressources d'urgence</span>:
+            </p>
+            <p>
+                <strong data-fr="Suicide Prévention" data-en="Suicide Prevention">Suicide Prévention</strong>: 1-866-APPELLE (277-3553)<br>
+                <strong data-fr="Ligne d'écoute Tel-Aide" data-en="Tel-Aide Listening Line">Ligne d'écoute Tel-Aide</strong>: 514-935-1101
+            </p>
+
+            <div class="footer-credits">
+                <p data-fr="Créé avec amour par <strong>Louis Jr Simard et Claude</strong>" 
+                   data-en="Created with love by <strong>Louis Jr Simard and Claude</strong>">
+                    Créé avec amour par <strong>Louis Jr Simard et Claude</strong>
+                </p>
+                <p style="margin-top: 10px; font-size: 0.85rem;">
+                    © 2025 Retour Vers Soi - 

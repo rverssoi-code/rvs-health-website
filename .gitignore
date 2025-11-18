@@ -1,0 +1,31 @@
+# Fichiers sensibles
+.env
+.env.local
+.env.production
+
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# VIDÉOS (trop grosses pour GitHub)
+# On garde SEULEMENT hero2.mp4
+video/*.mp4
+video/*.mov
+video/*.avi
+
+# EXCEPTION: Garder hero2.mp4
+!video/hero2.mp4
