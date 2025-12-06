@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Actualités RVS Health</title>
+    <link rel="stylesheet" href="admin-style.css">
+</head>
+<body class="dashboard">
+    <!-- Hero avec vidéo d'eau -->
+    <div class="hero-background">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="../video/hero2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <div>
+                    <h1>🌿 Actualités RVS Health</h1>
+                    <p class="subtitle">Gestion de contenu</p>
+                </div>
+            </div>
+            <div class="dashboard-actions">
+                <a href="../index.html" class="btn btn-secondary" target="_blank">
+                    👁️ Voir le site
+                </a>
+                <button id="logoutBtn" class="btn btn-logout">
+                    🚪 Déconnexion
+                </button>
+            </div>
+        </div>
+
+        <!-- Grid principal -->
+        <div class="dashboard-grid">
+            <!-- Panneau d'édition -->
+            <div class="editor-panel">
+                <h2 id="editorTitle">✏️ Nouvelle actualité</h2>
+                
+                <form id="actualiteForm">
+                    <input type="hidden" id="actualiteId">
+                    
+                    <div class="form-group">
+                        <label for="titre">Titre</label>
+                        <input type="text" id="titre" placeholder="Ex: Nouvelle pensée du jour" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date de publication</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contenu">Contenu</label>
+                        <textarea id="contenu" placeholder="Écrivez votre actualité ici..." required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="saveDraftBtn" class="btn btn-secondary">
+                            💾 Sauvegarder brouillon
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            🚀 Publier
+                        </button>
+                        <button type="button" id="cancelBtn" class="btn btn-secondary" style="display:none;">
+                            ❌ Annuler
+                        </button>
+                    </div>
+                    
+                    <div id="statusMessage" class="status-indicator" style="display:none;"></div>
+                </form>
+            </div>
+
+            <!-- Liste des actualités -->
+            <div class="actualites-list">
+                <h2>📚 Mes actualités</h2>
+                
+                <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+                    <button id="showAllBtn" class="btn btn-small btn-secondary">Toutes</button>
+                    <button id="showPublishedBtn" class="btn btn-small btn-secondary">Publiées</button>
+                    <button id="showDraftsBtn" class="btn btn-small btn-secondary">Brouillons</button>
+                </div>
+                
+                <div id="actualitesList">
+                    <!-- Les actualités seront chargées ici -->
+                    <p style="text-align: center; color: var(--gris-doux); padding: 40px;">
+                        Aucune actualité pour le moment.<br>
+                        Commencez par en créer une ! 🌱
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    
+    <script>
+        // Protection : vérifier l'authentification
+        if (sessionStorage.getItem('rvs_admin_auth') !== 'true') {
+            window.location.href = 'index.html';
+        }
+        
+        // Déconnexion
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            sessionStorage.removeItem('rvs_admin_auth');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
