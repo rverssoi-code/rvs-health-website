@@ -200,3 +200,73 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// ========================================
+// CHARGEMENT DES ACTUALITÉS
+// Pour le site public RVS Health
+// ========================================
+
+async function loadActualites() {
+    try {
+        const response = await fetch('data/actualites.json');
+        
+        if (!response.ok) {
+            // Fichier n'existe pas encore
+            showNoActualites();
+            return;
+        }
+        
+        const data = await response.json();
+        const actualites = data.actualites || [];
+        
+        if (actualites.length === 0) {
+            showNoActualites();
+            return;
+        }
+        
+        // Trier par date (plus récent en premier)
+        actualites.sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        // Afficher les actualités
+        displayActualites(actualites);
+        
+    } catch (error) {
+        console.error('Erreur chargement actualités:', error);
+        showNoActualites();
+    }
+}
+
+function displayActualites(actualites) {
+    const container = document.getElementById('actualites-container');
+    
+    container.innerHTML = actualites.map(actualite => `
+        <div class="actualite-card">
+            <div class="actualite-date">${formatDate(actualite.date)}</div>
+            <h3>${actualite.titre}</h3>
+            <p>${actualite.contenu}</p>
+        </div>
+    `).join('');
+}
+
+function showNoActualites() {
+    const container = document.getElementById('actualites-container');
+    container.innerHTML = `
+        <div class="no-actualites">
+            <p>Aucune actualité pour le moment.</p>
+            <p style="margin-top: 10px;">🌱 Revenez bientôt !</p>
+        </div>
+    `;
+}
+
+function formatDate(dateStr) {
+    const date = new Date(dateStr + 'T00:00:00');
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+    return date.toLocaleDateString('fr-CA', options);
+}
+
+// Charger les actualités au chargement de la page
+document.addEventListener('DOMContentLoaded', loadActualites);

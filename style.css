@@ -182,6 +182,109 @@ body {
 }
 
 /* ========================================
+   SECTION ACTUALITÉS
+   ======================================== */
+
+.actualites {
+    background: white;
+    position: relative;
+}
+
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.actualite-card {
+    background: var(--blanc-casse);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--or-doux);
+}
+
+.actualite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-left-color: var(--vert-sauge);
+}
+
+.actualite-date {
+    font-family: 'Alpha Brights', sans-serif;
+    font-size: 0.9rem;
+    color: var(--vert-sauge);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.actualite-card h3 {
+    font-family: 'Viking', serif;
+    color: var(--bleu-profond);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.actualite-card p {
+    color: var(--gris-doux);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    white-space: pre-wrap; /* Préserve les sauts de ligne */
+}
+
+/* Bouton admin discret */
+.admin-btn {
+    position: fixed;
+    bottom: 80px; /* Au-dessus du bouton fréquences */
+    right: 20px;
+    background: rgba(107, 142, 35, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 998;
+}
+
+.admin-btn:hover {
+    background: rgba(107, 142, 35, 0.8);
+    color: white;
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Message quand pas d'actualités */
+.no-actualites {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gris-doux);
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .actualites-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-btn {
+        bottom: 70px;
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
+
+
+/* ========================================
    SECTIONS GÉNÉRALES
    ======================================== */
 
