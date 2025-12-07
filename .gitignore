@@ -29,3 +29,6 @@ video/*.avi
 
 # EXCEPTION: Garder hero2.mp4
 !video/hero2.mp4
+
+# Les actualités plus dans le flow
+data/
