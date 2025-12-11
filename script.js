@@ -270,3 +270,110 @@ function formatDate(dateStr) {
 
 // Charger les actualités au chargement de la page
 document.addEventListener('DOMContentLoaded', loadActualites);
+
+/* ========================================
+   COOKIE BANNER JAVASCRIPT
+   À AJOUTER DANS UN <script> AVANT LA FERMETURE </body>
+   ======================================== */
+
+// Gestion du Cookie Banner - Loi 25 Québec
+(function() {
+    'use strict';
+    
+    const COOKIE_KEY = 'rvs_cookie_consent';
+    const COOKIE_EXPIRY_DAYS = 365;
+    
+    // Vérifier si le consentement a déjà été donné
+    function checkCookieConsent() {
+        const consent = localStorage.getItem(COOKIE_KEY);
+        return consent !== null;
+    }
+    
+    // Sauvegarder le choix de l'utilisateur
+    function saveCookieConsent(accepted) {
+        const consentData = {
+            accepted: accepted,
+            timestamp: new Date().toISOString(),
+            version: '1.0'
+        };
+        
+        localStorage.setItem(COOKIE_KEY, JSON.stringify(consentData));
+        
+        // Analytics optionnel - Seulement si accepté
+        if (accepted && typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+    }
+    
+    // Afficher le banner avec animation
+    function showCookieBanner() {
+        const banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 500); // Délai pour effet smooth
+    }
+    
+    // Masquer le banner avec animation
+    function hideCookieBanner() {
+        const banner = document.getElementById('cookie-banner');
+        if (!banner) return;
+        
+        banner.classList.remove('show');
+        setTimeout(() => {
+            banner.style.display = 'none';
+        }, 500);
+    }
+    
+    // Initialisation au chargement de la page
+    function initCookieBanner() {
+        // Si consentement déjà donné, ne rien afficher
+        if (checkCookieConsent()) {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.style.display = 'none';
+            }
+            return;
+        }
+        
+        // Afficher le banner après un court délai
+        showCookieBanner();
+        
+        // Bouton Accepter
+        const acceptBtn = document.getElementById('cookie-accept');
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                saveCookieConsent(true);
+                hideCookieBanner();
+                console.log('✅ Cookies acceptés - RVS Health');
+            });
+        }
+        
+        // Bouton Refuser
+        const declineBtn = document.getElementById('cookie-decline');
+        if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+                saveCookieConsent(false);
+                hideCookieBanner();
+                console.log('❌ Cookies refusés - RVS Health');
+            });
+        }
+    }
+    
+    // Fonction pour réinitialiser (utile pour tester)
+    window.resetCookieConsent = function() {
+        localStorage.removeItem(COOKIE_KEY);
+        console.log('🔄 Consentement réinitialisé');
+        location.reload();
+    };
+    
+    // Lancer au chargement de la page
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCookieBanner);
+    } else {
+        initCookieBanner();
+    }
+})();

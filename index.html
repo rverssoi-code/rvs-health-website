@@ -10,6 +10,35 @@
 </head>
 <body>
 
+    <!-- ========================================
+   COOKIE BANNER - À AJOUTER JUSTE APRÈS <body>
+   ======================================== -->
+
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+            <h3 data-fr="Respect de ta vie privée" data-en="Respecting your privacy">Respect de ta vie privée</h3>
+            <p data-fr="Ce site utilise uniquement des cookies essentiels pour son bon fonctionnement. Aucune donnée personnelle n'est collectée ou partagée avec des tiers. Conformément à la Loi 25 (Québec), tu gardes le contrôle total de tes informations." 
+               data-en="This site only uses essential cookies for its proper functioning. No personal data is collected or shared with third parties. In accordance with Law 25 (Quebec), you maintain full control of your information.">
+                Ce site utilise uniquement des cookies essentiels pour son bon fonctionnement. 
+                Aucune donnée personnelle n'est collectée ou partagée avec des tiers. 
+                Conformément à la Loi 25 (Québec), tu gardes le contrôle total de tes informations.
+            </p>
+        </div>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="cookie-btn cookie-accept" 
+                    data-fr="J'accepte" data-en="I accept">
+                J'accepte
+            </button>
+            <button id="cookie-decline" class="cookie-btn cookie-decline" 
+                    data-fr="Refuser" data-en="Decline">
+                Refuser
+            </button>
+        </div>
+    </div>
+</div>
+
     <!-- TOGGLE LANGUE -->
     <div class="language-toggle">
         <button class="lang-btn active" data-lang="fr">FR</button>
@@ -30,14 +59,13 @@
             <p class="hero-tagline" data-fr="Accompagnement authentique dans l'écoute, la bienveillance et la pleine conscience" data-en="Authentic accompaniment through listening, benevolence and mindfulness">
                 Accompagnement authentique dans l'écoute, la bienveillance et la pleine conscience
             </p>
-            <a href="#contact" class="cta-button" data-fr="Commencer mon chemin" data-en="Begin my journey">Commencer mon chemin</a>
-        </div>
+            </div>
     </section>
 
     <!-- PENSÉE DU JOUR -->
     <section class="pensee-du-jour">
         <div class="pensee-card">
-            <h3 data-fr="Pensée du jour" data-en="Thought of the day">Pensée du jour</h3>
+            <h3 data-fr="Souffle du jour" data-en="Breath of the day">Souffle du jour</h3>
             <p id="pensee-texte">
                 <!-- Généré automatiquement par JavaScript -->
             </p>
@@ -52,10 +80,10 @@
         </div>
     </section>
 
-    <!-- ========================================
-     SECTION ACTUALITÉS
-     À ajouter dans ton index.html (après la section "Pensée du jour" par exemple)
-     ======================================== -->
+<!-- ========================================
+  SECTION ACTUALITÉS
+  À ajouter dans ton index.html (après la section "Pensée du jour" par exemple)
+    ======================================== -->
 
 <section class="actualites">
     <h2 class="section-title">Actualités</h2>
@@ -132,26 +160,54 @@
                    data-en="This philosophy, he didn't read in a book. He forged it in pain, polished it in the contemplation of mountains and forests, and now offers it to those who need it.">
                     Cette philosophie, il ne l'a pas lue dans un livre. Il l'a forgée dans la douleur, polie dans la contemplation des montagnes et des forêts, et offerte maintenant à ceux qui en ont besoin.
                 </p>
+            
+                 <!-- certifications -->
 
                 <div class="certifications">
-                    <h4 data-fr="Ses formations" data-en="His training">Ses formations</h4>
-                    <p data-fr="Il a rassemblé des formations - non pas pour accumuler des diplômes, mais pour bâtir un coffre à outils capable d'aider vraiment."
-                       data-en="He gathered training - not to accumulate diplomas, but to build a toolbox capable of truly helping.">
-                        Il a rassemblé des formations - non pas pour accumuler des diplômes, mais pour bâtir un coffre à outils capable d'aider vraiment.
-                    </p>
-                    <ul style="margin-top: 15px;">
-                        <li data-fr="Conseiller en bienveillance" data-en="Benevolence counselor">Conseiller en bienveillance</li>
-                        <li data-fr="Conseiller personnel et professionnel" data-en="Personal and professional counselor">Conseiller personnel et professionnel</li>
-                        <li data-fr="DTMA - Désensibilisation des traumatismes par mouvements alternatifs" data-en="DTMA - Trauma desensitization through alternative movements">DTMA - Désensibilisation des traumatismes par mouvements alternatifs</li>
-                        <li data-fr="Hypnose éricksonienne" data-en="Ericksonian hypnosis">Hypnose éricksonienne</li>
-                        <li data-fr="Pleine conscience" data-en="Mindfulness">Pleine conscience</li>
-                        <li data-fr="Intervention en toxicomanie" data-en="Addiction intervention">Intervention en toxicomanie</li>
-                    </ul>
-                    <p class="certification-note" data-fr="*Formations complétées hors Québec, non reconnues par le gouvernement québécois. Il n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi. Parce que Louis Jr n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin."
-                       data-en="*Training completed outside Quebec, not recognized by the Quebec government. He is not a member of a professional order. And perhaps that's better. Because Louis Jr doesn't accompany within an institutional framework. He accompanies in real life, where crises happen at 3am.">
-                        *Formations complétées hors Québec, non reconnues par le gouvernement québécois. Il n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi. Parce que Louis Jr n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin.
-                    </p>
-                </div>
+    <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-bottom: 15px; font-size: 1.3rem;"
+        data-fr="Les outils dans son sac" data-en="Tools in his bag">
+        Les outils dans son sac
+    </h4>
+    
+    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px; color: var(--gris-doux);"
+       data-fr="Comme un randonneur qui rassemble ce dont il a besoin pour le voyage - non pas pour collectionner, mais pour être prêt quand quelqu'un en aura besoin."
+       data-en="Like a hiker who gathers what he needs for the journey - not to collect, but to be ready when someone needs it.">
+        Comme un randonneur qui rassemble ce dont il a besoin pour le voyage - non pas pour collectionner, mais pour être prêt quand quelqu'un en aura besoin.
+    </p>
+    
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="Conseiller en bienveillance" data-en="Benevolence counselor">Conseiller en bienveillance</span>
+        </li>
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="Conseiller personnel et professionnel" data-en="Personal and professional counselor">Conseiller personnel et professionnel</span>
+        </li>
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="DTMA - Désensibilisation des traumatismes" data-en="DTMA - Trauma desensitization">DTMA - Désensibilisation des traumatismes</span>
+        </li>
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="Hypnose éricksonienne" data-en="Ericksonian hypnosis">Hypnose éricksonienne</span>
+        </li>
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="Pleine conscience" data-en="Mindfulness">Pleine conscience</span>
+        </li>
+        <li style="padding: 12px 12px 12px 35px; position: relative; font-size: 1.05rem; background: rgba(248, 246, 240, 0.5); margin-bottom: 8px; border-radius: 8px;">
+            <span style="position: absolute; left: 12px; color: var(--vert-sauge); font-weight: bold; font-size: 1.2rem;">✓</span>
+            <span data-fr="Intervention en toxicomanie" data-en="Addiction intervention">Intervention en toxicomanie</span>
+        </li>
+    </ul>
+    
+    <p style="font-size: 0.95rem; font-style: italic; color: var(--gris-doux); margin-top: 20px; line-height: 1.7;"
+       data-fr="Formations complétées hors Québec, non reconnues par le gouvernement. Louis Jr n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi - parce qu'il n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin."
+       data-en="Training completed outside Quebec, not recognized by the government. Louis Jr is not a member of a professional order. And perhaps it's better that way - because he doesn't accompany within an institutional framework. He accompanies in real life, where crises arrive at 3am.">
+        Formations complétées hors Québec, non reconnues par le gouvernement. Louis Jr n'est pas membre d'un ordre professionnel. Et c'est peut-être mieux ainsi - parce qu'il n'accompagne pas dans un cadre institutionnel. Il accompagne dans la vie réelle, là où les crises arrivent à 3h du matin.
+    </p>
+</div>
 
                 <h4 style="font-family: 'Viking', serif; color: var(--bleu-profond); margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;">
                     <span data-fr="Ce que ses amis disent de lui" data-en="What his friends say about him">Ce que ses amis disent de lui</span>
@@ -319,91 +375,43 @@
 </section>
 
     <!-- CHEMINEMENTS -->
-    <section class="cheminements" id="cheminements">
-        <h2 class="section-title" data-fr="Cheminements guidés" data-en="Guided pathways">Cheminements guidés</h2>
-        <p class="section-subtitle" data-fr="Programmes que tu peux faire à ton rythme, avec option d'accompagnement personnalisé" 
-           data-en="Programs you can follow at your own pace, with personalized accompaniment option">
-            Programmes que tu peux faire à ton rythme, avec option d'accompagnement personnalisé
+<section class="cheminements" id="cheminements">
+    <h2 class="section-title" data-fr="Accompagnement" data-en="Guidance">Accompagnement</h2>
+    
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 1.3rem; line-height: 2; color: var(--gris-doux); margin-bottom: 30px;"
+           data-fr="Je suis là, simplement présent dans l'univers, si tu ressens le besoin d'être accompagné sur ton chemin."
+           data-en="I am here, simply present in the universe, if you feel the need to be accompanied on your journey.">
+            Je suis là, simplement présent dans l'univers, si tu ressens le besoin d'être accompagné sur ton chemin.
         </p>
-
-        <div class="cheminements-grid">
-            <!-- Carte 1 - ATELIERS -->
-            <div class="cheminement-card">
-                <div class="badge-preparation" data-fr="EN PRÉPARATION" data-en="IN PREPARATION">EN PRÉPARATION</div>
-                <h3 data-fr="Retour Vers Soi" data-en="Return to Self">Retour Vers Soi</h3>
-                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Choix d'ateliers" data-en="Workshop selection">Choix d'ateliers</h4>
-                <p data-fr="Choix sur différents ateliers déjà préparés, généraux en pleine conscience." 
-                   data-en="Choice of various workshops already prepared, general mindfulness-based.">
-                    Choix sur différents ateliers déjà préparés, généraux en pleine conscience.
-                </p>
-                <p class="cheminement-price">30$ <span style="font-size: 1rem;">/atelier</span></p>
-                <button class="cheminement-btn btn-disabled" disabled>
-                    <span data-fr="S'inscrire - EN PRÉPARATION" data-en="Register - IN PREPARATION">S'inscrire - EN PRÉPARATION</span>
-                </button>
-            </div>
-
-            <!-- Carte 2 - ORACLE -->
-            <div class="cheminement-card card-featured">
-                <div class="badge-preparation" data-fr="EN PRÉPARATION" data-en="IN PREPARATION">EN PRÉPARATION</div>
-                <h3 data-fr="Tirage ORACLE" data-en="ORACLE Reading">Tirage ORACLE</h3>
-                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Tirage Oracle Retour Vers Soi" data-en="Return to Self Oracle Reading">Tirage Oracle Retour Vers Soi</h4>
-                <p data-fr="Tirage style tarot. Faites-vous tirer par l'Oracle Retour Vers Soi, créé en collaboration avec Louis Jr Simard et Claude, pour vous offrir des tirages en Bienveillance, Harmonie et Pleine Conscience." 
-                   data-en="Tarot-style reading. Get your cards read by the Return to Self Oracle, created in collaboration with Louis Jr Simard and Claude, to offer you readings in Benevolence, Harmony and Mindfulness.">
-                    Tirage style tarot. Faites-vous tirer par l'Oracle Retour Vers Soi, créé en collaboration avec Louis Jr Simard et Claude, pour vous offrir des tirages en Bienveillance, Harmonie et Pleine Conscience.
-                </p>
-                <!-- AJOUTE ÇA ICI ↓ -->
-                <p style="text-align: center; font-size: 0.9rem; margin: 15px 0; font-style: italic; color: var(--vert-sauge);">
-                 <span data-fr="" data-en="* Oracle readings are available in French only at this time">* Oracle readings are available in French only at this time</span>
-                </p>
-                <p class="cheminement-price" style="font-size: 1.5rem;">
-                    <span data-fr="À partir de 9,99$ à 189,99$ CAD" data-en="From $9.99 to $189.99 CAD">À partir de 9,99$ à 189,99$ CAD</span>
-                </p>
-                <button class="cheminement-btn btn-disabled" disabled>
-                    <span data-fr="S'inscrire - EN PRÉPARATION" data-en="Register - IN PREPARATION">S'inscrire - EN PRÉPARATION</span>
-                </button>
-            </div>
-
-            <!-- Carte 3 - ÉCOUTE ET LIBÉRATION -->
-            <div class="cheminement-card">
-                <h3 data-fr="Écoute et Libération" data-en="Listening and Release">Écoute et Libération</h3>
-                <h4 style="font-size: 1.2rem; color: var(--vert-sauge); margin-bottom: 15px;" data-fr="Accompagnement personnalisé" data-en="Personalized accompaniment">Accompagnement personnalisé</h4>
-                <p data-fr="Écoute en pleine conscience, dans la nature, en personne. Service personnel et confidentiel." 
-                   data-en="Mindful listening, in nature, in person. Personal and confidential service.">
-                    Écoute en pleine conscience, dans la nature, en personne. Service personnel et confidentiel.
-                </p>
-                <p class="cheminement-price" style="font-size: 1.5rem;" data-fr="À déterminer" data-en="To be determined">À déterminer</p>
-                <a href="mailto:rverssoi@gmail.com?subject=Demande%20de%20rencontre%20-%20Libération%20émotionnelle%20avec%20Louis%20Jr%20ou%20Sébastien" 
-                   class="cheminement-btn cheminement-btn-active">
-                    <span data-fr="Prendre rendez-vous" data-en="Book appointment">Prendre rendez-vous</span>
-                </a>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: var(--gris-doux); font-style: italic;">
-                    <span data-fr="Avec Louis Jr ou Sébastien" data-en="With Louis Jr or Sébastien">Avec Louis Jr ou Sébastien</span>
-                </p>
-            </div>
-        </div>
-    </section>
+        
+        <p style="font-size: 1.15rem; line-height: 1.9; color: var(--gris-doux); font-style: italic;"
+           data-fr="Que ce soit pour une écoute bienveillante, un cheminement personnel, ou simplement une présence - contacte-moi et on verra ensemble ce qui résonne."
+           data-en="Whether for compassionate listening, personal journey, or simply a presence - contact me and we'll see together what resonates.">
+            Que ce soit pour une écoute bienveillante, un cheminement personnel, ou simplement une présence - contacte-moi et on verra ensemble ce qui résonne.
+        </p>
+    </div>
+</section>
 
     <!-- BOUTIQUE -->
-    <section class="boutique" id="boutique" style="background: white; padding: 80px 20px;">
-        <h2 class="section-title" data-fr="Boutique RVS" data-en="RVS Shop">Boutique RVS</h2>
-        <p class="section-subtitle" data-fr="Vêtements et accessoires pour accompagner ton retour vers soi" 
-           data-en="Clothing and accessories to accompany your return to self"
-           data-fr="Vêtements et accessoires pour accompagner ton retour vers soi">
-        </p>
-        
-        <div style="text-align: center; margin-top: 40px;">
-          
+    <section class="boutique" id="boutique">
+    <h2 class="section-title" data-fr="Boutique" data-en="Shop">Boutique</h2>
+    
+    <p style="text-align: center; font-size: 1.2rem; color: var(--gris-doux); max-width: 700px; margin: 0 auto 40px;" 
+       data-fr="Quelques créations pour ceux qui résonnent avec cette énergie"
+       data-en="Some creations for those who resonate with this energy">
+        Quelques créations pour ceux qui résonnent avec cette énergie
+    </p>
+    
+    <div style="text-align: center; margin-top: 40px;">
         <a href="https://www.bonfire.com/store/retour-vers-soi/" target="_blank" class="cta-button" 
-               data-fr="Visiter la boutique" data-en="Visit the shop">
-                Visiter la boutique
-            </a>
-        </div>
-        <!-- <iframe src="https://www.bonfire.com/store/retour-vers-soi/" width="100%" height="800px" frameborder="0"></iframe> -->
-        <!-- Alternative avec iframe si tu préfères -->
-      
-        
-    </section>
+           data-fr="Visiter la boutique" data-en="Visit the shop">
+            Visiter la boutique
+        </a>
+    </div>
+</section>
 
+      
     <!-- CONTACT -->
     <section class="contact" id="contact" style="background: var(--blanc-casse); padding: 80px 20px;">
         <h2 class="section-title" data-fr="Commençons ensemble" data-en="Let's begin together">Commençons ensemble</h2>
@@ -486,14 +494,26 @@
             <p style="font-size: 1.1rem; margin-bottom: 20px;">
                 <span data-fr="Ressources d'urgence" data-en="Emergency resources">Ressources d'urgence</span>:
             </p>
-            <p>
-                <strong data-fr="Suicide Prévention" data-en="Suicide Prevention">Suicide Prévention</strong>: 1-866-APPELLE (277-3553)<br>
+            
+            <p> <strong data-fr="Suicide Prévention" data-en="Suicide Prevention">Suicide Prévention</strong>: 1-866-APPELLE (277-3553)<br>
                 <strong data-fr="Ligne d'écoute Tel-Aide" data-en="Tel-Aide Listening Line">Ligne d'écoute Tel-Aide</strong>: 514-935-1101
             </p>
+
+            <p style="margin-top: 30px; font-size: 0.9rem;">
+            <a href="politique-confidentialite.html" 
+               style="color: var(--or-doux); text-decoration: none; transition: opacity 0.3s;"
+               onmouseover="this.style.opacity='0.7'" 
+               onmouseout="this.style.opacity='1'"
+               data-fr="Politique de confidentialité" 
+               data-en="Privacy Policy">
+                Politique de confidentialité
+            </a>
+        </p>
 
             <div class="footer-credits">
                 <p data-fr="Créé avec amour par Louis Jr Simard et Claude"
                    data-en="Created with love by Louis Jr Simard and Claude">
+                   Créé avec amour par Louis Jr Simard et Claude
                 </p>
                 
                    <p style="margin-top: 10px; font-size: 0.85rem;">
@@ -505,3 +525,4 @@
 
     <script src="script.js"></script>
 </body>
+</html>
