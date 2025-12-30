@@ -175,10 +175,246 @@ body {
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
-.cta-button:hover {
-    background: var(--beige-chaud);
+.cta-button_1:hover {
+    background: var(--or-doux);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 6px 20px rgba(19, 38, 143, 0.938);
+}
+
+/* Oracle Announcement Section */
+
+
+
+.oracle-announcement {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* z-index: 0; */
+}
+
+.oracle-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.oracle-header h2 {
+    font-size: 2.5rem;
+    color: #ffffff;  /* BLANC pour voir les papillons */
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    text-shadow: 0 8px 16px rgba(63, 19, 146, 0.795);  /* Shadow plus prononcée */
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));  /* Double shadow */
+}
+
+.oracle-subtitle {
+    font-size: 1.2rem;
+    color: rgba(145, 51, 252, 0.8);
+    font-style: italic;
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+}
+
+.oracle-content {
+    line-height: 1.8;
+}
+
+.oracle-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgba(145, 51, 252, 0.8);
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+}
+
+/* Pastille avec image de fond */
+.oracle-description-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(3, 19, 90, 0.753);
+}
+
+.oracle-description-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc21;
+    /* background-image: url('images/main_soleil.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08; */
+    /* z-index: 0; */
+    border-radius: 15px;
+    
+}
+
+.oracle-description {
+    margin: 0;
+    color: rgba(135, 37, 247, 0.9);
+    text-align: center;
+    font-size: 1.05rem;
+    position: relative;
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+    /* z-index: 1; */
+    /* box-shadow: 0 8px 25px rgba(3, 19, 90, 0.753); */
+}
+
+.oracle-card {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    z-index: 0;
+}
+
+.oracle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: #cccccc21; */
+    background-image: url('images/main_soleil.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 15px;
+    
+}
+
+.oracle-pricing {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.pricing-single {
+    display: inline-block;
+    padding: 2.5rem 3rem;
+    background-color: #cccccc21;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 15px;
+    max-width: 400px;
+    box-shadow: 0 8px 25px rgba(3, 19, 90, 0.753);
+}
+
+.pricing-single h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1339e0;
+    font-family: 'Cinzel', serif;
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Cinzel', serif;
+}
+
+.price-desc {
+    font-size: 1rem;
+    color: rgba(145, 51, 252, 0.8);
+    line-height: 1.6;
+    margin-top: 1rem;
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+}
+
+.oracle-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-button_1 {
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+.cta-button_1:hover {
+    transform: translateY(-5px) translateX(-5px);
+    box-shadow: 0 8px 25px rgba(3, 19, 90, 0.753);
+}
+
+.oracle-tagline {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(145, 51, 252, 0.8);
+    filter: drop-shadow(0 5px 10px rgba(121, 27, 243, 0.8));
+    letter-spacing: 1.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oracle-announcement {
+        padding: 2rem 1rem;
+    }
+    
+    .oracle-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .oracle-header h2 {
+        font-size: 2rem;
+    }
+    
+    .oracle-subtitle {
+        font-size: 1rem;
+    }
+    
+    .oracle-intro {
+        font-size: 1.1rem;
+    }
+    
+    .oracle-description {
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    .pricing-single {
+        padding: 2rem;
+        max-width: 100%;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
 }
 
 /* ========================================
