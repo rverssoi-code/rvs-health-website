@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function loadActualites() {
     try {
-        const response = await fetch('data/actualites.json');
+        const response = await fetch('/data/actualites.json');
         
         if (!response.ok) {
             // Fichier n'existe pas encore
