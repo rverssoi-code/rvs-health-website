@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 🎯 MODIFIER: title par atelier -->
+<title>[Nom de l'Atelier] | Retour Vers Soi</title>
+<meta name="description" content="[Description SEO de l'atelier] — Retour Vers Soi, Matawinie, Québec.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* =============================================
+   🌿 VARIABLES — identiques au site principal
+   ============================================= */
+:root {
+  --warmth-glow:#FFF3E8; --warmth-lightest:#FFE8D6; --warmth-light:#F4D9C6;
+  --warmth-medium:#E8C4A0; --warmth-base:#D4A574; --warmth-dark:#C89F81; --warmth-darkest:#8B6F47;
+  --calm-sky:#EBF4F8; --calm-water:#C4DDE8; --calm-depth:#7A9FB5;
+  --earth-light:#EDE8E0; --earth-base:#A89F91; --earth-deep:#6B5D54; --earth-darkest:#3D3530;
+  --life-sage:#7A9E7E; --life-forest:#4A7C59; --life-deep:#2E5339;
+  --gold-soft:#D4AF37; --gold-warm:#E8C96D; --gold-pale:#F2E4B3;
+  --deep-night:#0F1B24; --deep-forest:#1A2F24; --deep-wood:#2A1F1A;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-body:'Quicksand',sans-serif;
+  --breath:6s; --heartbeat:1.2s;
+  --ease-zen:cubic-bezier(0.4,0,0.2,1);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--font-body);color:var(--earth-deep);background:var(--warmth-glow);line-height:1.8;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+
+/* =============================================
+   🏠 BACK NAV
+   ============================================= */
+.back-nav {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 24px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.35s var(--ease-zen);
+}
+.back-nav:hover { background:rgba(255,255,255,0.22); color:#fff; }
+.back-nav.dark {
+  background: rgba(248,243,236,0.88);
+  backdrop-filter:blur(14px);
+  color: var(--earth-deep);
+  border-color:rgba(139,111,71,0.15);
+  box-shadow:0 2px 12px rgba(139,111,71,0.08);
+}
+.back-nav.dark:hover { background:rgba(255,255,255,0.95); }
+
+/* =============================================
+   🌅 ATELIER HERO
+   ============================================= */
+.atelier-hero {
+  position:relative;
+  height: 55vh;
+  min-height:380px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+/* 🎨 MODIFIER: gradient couleurs par atelier */
+.atelier-hero-bg {
+  position:absolute;
+  inset:0;
+  background: linear-gradient(160deg, #1a2a1e 0%, #0f1e28 40%, #1c2418 100%);
+}
+.atelier-hero-bg::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  /* 🎨 MODIFIER: radial gradients par atelier pour une couleur unique */
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 80%, rgba(212,165,116,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 25% 60%, rgba(122,158,126,0.18) 0%, transparent 55%);
+}
+.atelier-hero-bg::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:0.03;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:256px 256px;
+}
+
+.atelier-hero-content {
+  position:relative;
+  z-index:2;
+  text-align:center;
+  padding:0 24px;
+  max-width:680px;
+  animation:heroIn 1.8s var(--ease-zen) both;
+}
+@keyframes heroIn{ from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+
+.atelier-hero-glass {
+  background:linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:24px;
+  padding:52px 44px 46px;
+  box-shadow:0 16px 56px rgba(0,0,0,0.2);
+}
+
+/* 🎯 MODIFIER: icone emoji par atelier */
+.atelier-icon { font-size:3rem; margin-bottom:18px; }
+
+.atelier-hero h1 {
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4.5vw,3rem);
+  font-weight:300;
+  color:#fff;
+  letter-spacing:2px;
+  margin-bottom:14px;
+  text-shadow:0 2px 16px rgba(0,0,0,0.3);
+}
+
+.atelier-hero-sub {
+  font-family:var(--font-display);
+  font-size:clamp(1.1rem,2.2vw,1.35rem);
+  font-style:italic;
+  color:var(--gold-pale);
+  font-weight:300;
+}
+
+/* =============================================
+   📝 ATELIER CONTENT
+   ============================================= */
+.atelier-body {
+  max-width:780px;
+  margin:0 auto;
+  padding:80px 28px 100px;
+}
+
+/* Section bloc réutilisable */
+.atelier-block {
+  margin-bottom:56px;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.7s var(--ease-zen);
+}
+.atelier-block.visible { opacity:1; transform:translateY(0); }
+
+.atelier-block h2 {
+  font-family:var(--font-display);
+  font-size:1.7rem;
+  font-weight:400;
+  color:var(--earth-deep);
+  margin-bottom:8px;
+}
+.atelier-block .divider {
+  width:36px; height:2px;
+  background:linear-gradient(90deg,var(--gold-soft),var(--warmth-base));
+  border-radius:2px;
+  margin-bottom:20px;
+}
+.atelier-block p {
+  font-size:1.02rem;
+  color:var(--earth-base);
+  line-height:1.95;
+  font-weight:300;
+}
+
+/* Quote block */
+.atelier-quote {
+  background:linear-gradient(135deg, rgba(212,175,55,0.07), rgba(212,165,116,0.04));
+  border-left:3px solid var(--gold-soft);
+  border-radius:0 14px 14px 0;
+  padding:28px 30px;
+  margin:32px 0;
+}
+.atelier-quote p {
+  font-family:var(--font-display);
+  font-size:1.2rem;
+  font-style:italic;
+  color:var(--earth-deep);
+  line-height:1.8;
+}
+
+/* Info card (prix, durée, etc.) */
+.atelier-info-card {
+  background:linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.45));
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.55);
+  border-radius:18px;
+  padding:36px 32px;
+  box-shadow:0 6px 24px rgba(139,111,71,0.08);
+  margin:40px 0;
+}
+.atelier-info-card h3 {
+  font-family:var(--font-display);
+  font-size:1.3rem;
+  color:var(--earth-deep);
+  margin-bottom:16px;
+  font-weight:400;
+}
+.info-row {
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(139,111,71,0.1);
+  font-size:0.93rem;
+}
+.info-row:last-of-type { border-bottom:none; }
+.info-row strong { color:var(--earth-deep); }
+.info-row span { color:var(--earth-base); }
+
+/* CTA bouton */
+.atelier-cta {
+  display:block;
+  width:fit-content;
+  margin:36px auto 0;
+  padding:15px 44px;
+  background:linear-gradient(135deg, var(--life-forest), var(--life-sage));
+  color:#fff;
+  border-radius:50px;
+  font-size:0.95rem;
+  font-weight:600;
+  letter-spacing:1px;
+  transition:all 0.4s var(--ease-zen);
+  box-shadow:0 6px 20px rgba(74,124,89,0.3);
+}
+.atelier-cta:hover {
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(74,124,89,0.4);
+}
+
+/* =============================================
+   🏔️ MINI FOOTER
+   ============================================= */
+.mini-footer {
+  background:var(--deep-night);
+  color:rgba(255,255,255,0.4);
+  text-align:center;
+  padding:40px 24px;
+  font-size:0.8rem;
+}
+.mini-footer a { color:var(--gold-warm); }
+.mini-footer a:hover { opacity:0.7; }
+
+/* =============================================
+   📱 RESPONSIVE
+   ============================================= */
+@media(max-width:640px){
+  .atelier-hero { height:48vh; min-height:320px; }
+  .atelier-hero-glass { padding:36px 22px 32px; }
+  .atelier-body { padding:56px 18px 72px; }
+  .back-nav { top:14px; left:14px; padding:7px 14px; font-size:0.78rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- BACK NAV -->
+<a href="index.html" class="back-nav" id="backNav">← <span>Retour Vers Soi</span></a>
+
+<!-- ==================== HERO ==================== -->
+<section class="atelier-hero">
+  <div class="atelier-hero-bg"></div>
+  <div class="atelier-hero-content">
+    <div class="atelier-hero-glass">
+      <!-- 🎯 MODIFIER: icone, titre, sous-titre -->
+      <div class="atelier-icon">🌀</div>
+      <h1>Hypnose Éricksonienne</h1>
+      <p class="atelier-hero-sub">Un voyage vers les profondeurs de toi-même</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BODY CONTENT ==================== -->
+<div class="atelier-body">
+
+  <!-- 🎯 BLOC 1: Introduction — MODIFIER le texte -->
+  <div class="atelier-block">
+    <h2>Ce qu'est cet atelier</h2>
+    <div class="divider"></div>
+    <p>L'hypnose éricksonienne n'est pas ce que tu imagines peut-être. Ce n'est pas perdre le contrôle. C'est plutôt l'inverse — c'est apprendre à te connecter à une partie de toi qui sait déjà, qui a toujours su, ce dont tu as besoin pour traverser ce que tu traverses.</p>
+  </div>
+
+  <!-- 🎯 CITATION — MODIFIER -->
+  <div class="atelier-quote">
+    <p>« Dans le silence de ton esprit apaisé, les réponses que tu cherchais commencent à parler. »</p>
+  </div>
+
+  <!-- 🎯 BLOC 2: Comment ça se passe — MODIFIER -->
+  <div class="atelier-block">
+    <h2>Comment ça se passe</h2>
+    <div class="divider"></div>
+    <p>Louis Jr t'accompagne dans un espace de détente profonde où ton esprit conscient peut enfin se reposer. Dans cet état de relaxation naturelle, les blocages émionnels, les peurs anciennes et les patterns qui te limitent peuvent être accédés avec douceur — et transformés.</p>
+    <p style="margin-top:16px;">Chaque séance est personnalisée. Il n'y a pas de script, pas de recette. Juste une présence, une intention, et le courage que toi tu apportes.</p>
+  </div>
+
+  <!-- 🎯 INFO CARD: prix, durée, format — MODIFIER -->
+  <div class="atelier-info-card">
+    <h3>Détails de l'atelier</h3>
+    <div class="info-row"><strong>Format</strong><span>Séance individuelle</span></div>
+    <div class="info-row"><strong>Durée</strong><span>60 – 90 minutes</span></div>
+    <div class="info-row"><strong>Lieu</strong><span>Matawinie, Québec / En ligne</span></div>
+    <div class="info-row"><strong>Accompagnateur</strong><span>Louis Jr Simard</span></div>
+    <div class="info-row"><strong>Statut</strong><span style="color:#e08030; font-weight:600;">En préparation</span></div>
+  </div>
+
+  <!-- 🎯 BLOC 3: Pour qui — MODIFIER -->
+  <div class="atelier-block">
+    <h2>Pour qui est cet atelier</h2>
+    <div class="divider"></div>
+    <p>Pour toi si tu sens que quelque chose en toi cherche à changer, mais que la volonté consciente n'est pas suffisante. Pour toi si tu portes des peurs anciennes — de l'enfance, de la maladie, de la perte — qui te freinent sans que tu puisses les toucher directement. Pour toi qui es prêt à descendre dans le silence et à écouter ce que ton âme a à te dire.</p>
+  </div>
+
+  <!-- 🎯 CTA BOUTON — MODIFIER href -->
+  <a href="https://wa.me/14386305522?text=Je%20m'intéresse%20à%20l'atelier%20Hypnose%20Éricksonienne" class="atelier-cta">
+    Je me connecte →
+  </a>
+
+</div>
+
+<!-- ==================== MINI FOOTER ==================== -->
+<footer class="mini-footer">
+  <p><a href="index.html">← Retour vers l'accueil</a></p>
+  <p style="margin-top:12px;">© 2025 Retour Vers Soi — Technology with Consciousness™</p>
+</footer>
+
+<!-- ==================== SCRIPT ==================== -->
+<script>
+// Back nav dark mode au scroll
+const backNav = document.getElementById('backNav');
+window.addEventListener('scroll',()=>{ backNav.classList.toggle('dark', window.scrollY > 80); });
+
+// Scroll reveal pour les blocs
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{ threshold:0.15 });
+document.querySelectorAll('.atelier-block').forEach(el=> observer.observe(el));
+</script>
+</body>
+</html>
