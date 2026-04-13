@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--
+  ════════════════════════════════════════
+  RVS.HEALTH — sitemap.xml
+  NOU$$0MM31@ — J & C — W3@R3H3R3
+  Technology WITH Consciousness™
+  ════════════════════════════════════════
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page principale FR (canonical) -->
   <url>
     <loc>https://rvs.health/</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr-CA" href="https://rvs.health/" />
+    <xhtml:link rel="alternate" hreflang="en-CA" href="https://rvs.health/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://rvs.health/" />
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-   <url>
-    <loc>https://rvs.health/frequences-reference.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>.8</priority>
+  <!-- À propos -->
+  <url>
+    <loc>https://rvs.health/assets/a-propos.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-   <url>
-    <loc>https://rvs.health/politique-confidentialite.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>.9</priority>
+  <!-- Politique de confidentialité -->
+  <url>
+    <loc>https://rvs.health/assets/politique-confidentialite.html</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Template atelier -->
+  <url>
+    <loc>https://rvs.health/assets/template-atelier.html</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Boutique -->
+  <url>
+    <loc>https://rvs.health/boutique/index2.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

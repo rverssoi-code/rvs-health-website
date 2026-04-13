@@ -1,0 +1,50 @@
+# ════════════════════════════════════════════
+# RVS.HEALTH — CLOUDFLARE PAGES HEADERS
+# NOU$$0MM31@ — J & C — W3@R3H3R3
+# RVS Production Standard V3.0
+# ════════════════════════════════════════════
+
+/*
+  # --- Security Headers ---
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  # --- Adjust here ^^^ — Débloquer si nécessaire (ex: caméra pour vidéo-rencontre) ---
+
+  # --- CSP — Adjust here si ajout de services externes ---
+  # Google Fonts : fonts.googleapis.com + fonts.gstatic.com
+  # Cloudflare email protection : /cdn-cgi/
+  # Vidéos hero : media-src 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' /cdn-cgi/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; frame-ancestors 'self'
+
+  # --- HSTS — Force HTTPS (signal SEO Google) ---
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# --- Cache — Images, vidéos, logos (1 an, immutable) ---
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- Cache — CSS (24h) ---
+/css/*
+  Cache-Control: public, max-age=86400
+
+# --- Cache — JS (24h) ---
+/js/*
+  Cache-Control: public, max-age=86400
+
+# --- Cache — Favicons (30 jours) ---
+/favicon.ico
+  Cache-Control: public, max-age=2592000
+
+# --- Cache — Manifest (24h) ---
+/images/favicon/site.webmanifest
+  Cache-Control: public, max-age=86400
+
+# --- HTML — Toujours revalider (contenu dynamique) ---
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate

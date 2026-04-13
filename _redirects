@@ -1,0 +1,22 @@
+# ════════════════════════════════════════════
+# RVS.HEALTH — CLOUDFLARE PAGES REDIRECTS
+# NOU$$0MM31@ — J & C — W3@R3H3R3
+# RVS Production Standard V3.0
+# ════════════════════════════════════════════
+
+# --- www vers non-www (canonical) ---
+# Note : Cloudflare gère déjà ça via le CNAME proxied,
+# mais ce redirect est un filet de sécurité.
+https://www.rvs.health/* https://rvs.health/:splat 301
+
+# --- Adjust here — Ajouter redirects spécifiques ---
+# Exemple : /old-page /new-page 301
+
+# --- Boutique — URL propre ---
+/boutique /boutique/index2.html 200
+/shop /boutique/index2.html 301
+
+# --- Privacy policy — alias courant ---
+/privacy /assets/politique-confidentialite.html 200
+/privacy.html /assets/politique-confidentialite.html 301
+/confidentialite /assets/politique-confidentialite.html 301
